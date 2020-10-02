@@ -2,3 +2,9 @@
 2020-10-02 16:00:56.2960 INFO Contact Details Addition Successful: AddingContactDetails()
 2020-10-02 16:00:56.3119 WARN Entered Wrong Phone no. : AdditionContactDetails()
 2020-10-02 16:00:56.3216 INFO Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 16:15:06.6493 WARN Entered Wrong Phone no. : AdditionContactDetails()
+2020-10-02 16:15:11.8704 INFO No more contact details have been entered
+2020-10-02 16:18:06.2281 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 16:18:28.4452 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 16:18:29.0309 INFO No more contact details have been entered
+2020-10-02 16:18:29.0790 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
