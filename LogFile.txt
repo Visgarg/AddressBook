@@ -1,0 +1,4 @@
+2020-10-02 16:00:56.0602 WARN Entered Wrong Phone no. : AdditionContactDetails()
+2020-10-02 16:00:56.2960 INFO Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 16:00:56.3119 WARN Entered Wrong Phone no. : AdditionContactDetails()
+2020-10-02 16:00:56.3216 INFO Contact Details Addition Successful: AddingContactDetails()
