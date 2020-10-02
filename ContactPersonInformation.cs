@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AddressBook
 {
-    class ContactPersonInformation
+    public class ContactPersonInformation
     {
         List<ContactDetails> contactDetailsList;
         private readonly NLog nLog = new NLog();
@@ -14,13 +14,15 @@ namespace AddressBook
         {
             contactDetailsList = new List<ContactDetails>();
         }
+       
         public void AddingContactDetails()
         {
-            ContactPersonInformation contact = new ContactPersonInformation();
+            ContactPersonInformation contactPersonalInformation = new ContactPersonInformation();
+            //able to add multiple contact details in one list
 
             while (true)
             {
-                Repeat:  Console.WriteLine("Please enter first name, last name, address, city, state, zip, phoneno and email");
+            Repeat: Console.WriteLine("Please enter first name, last name, address, city, state, zip, phoneno and email");
                 string firstName = Console.ReadLine();
                 if (firstName == "")
                 {
@@ -41,24 +43,30 @@ namespace AddressBook
                     goto Repeat;
                 }
                 string eMail = Console.ReadLine();
-              
+
                 ContactDetails contactDetails = new ContactDetails(firstName, lastName, address, city, state, zip, phoneNo, eMail);
-                
-                if (contactDetailsList.Contains(contactDetails))
+
+                //if (contactDetailsList.Contains(contactDetails))----------> ask doubt.
+                foreach(ContactDetails contactDetail in contactDetailsList)
                 {
-                    nLog.LogError("Contact details have already been entered");
-                    Console.WriteLine("Contact details have already been entered\n please add new contact details");
-                    goto Repeat;
+                    if (contactDetail.firstName == firstName && contactDetail.lastName == lastName && contactDetail.address == address && contactDetail.city == city && contactDetail.state == state && contactDetail.zip == zip && contactDetail.phoneNo == phoneNo && contactDetail.eMail == eMail)
+                    {
+                        nLog.LogError("Contact details have already been entered");
+                        Console.WriteLine("Contact details have already been entered\n please add new contact details");
+                        goto Repeat;
+                    }
 
                 }
-                else
-                {
+                //else
+                //{
                     contactDetailsList.Add(contactDetails);
-                    nLog.LogDebug("Contact Details Addition Successful: AddingContactDetails()");                  
-                }
+                    nLog.LogDebug("Contact Details Addition Successful: AddingContactDetails()");
+                //}
             }
-            
-            contact.DisplayContactDetails();
+
+            contactPersonalInformation.DisplayContactDetails();
+            AddressBook addressBook = new AddressBook();
+            //addressBook.AddingAddressBook(contactDetailsList);
 
                
         }

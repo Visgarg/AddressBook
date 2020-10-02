@@ -98,3 +98,48 @@
 2020-10-02 18:07:08.5773 DEBUG Deletion Operation Successful:DeletingContactDetails()
 2020-10-02 18:07:09.9315 INFO Process Completed
 2020-10-02 18:07:09.9315 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 20:32:36.7467 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 20:33:07.2954 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 20:33:37.9240 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 20:33:38.9391 INFO No more contact details have been entered
+2020-10-02 20:33:38.9507 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 20:33:38.9685 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 20:34:29.3850 DEBUG Debug successful, firstname successfully changed : EditingContactDetails()
+2020-10-02 20:34:46.4832 INFO User wants to update further information
+2020-10-02 20:34:52.1858 DEBUG Debug successful, lastname successfully changed : EditingContactDetails()
+2020-10-02 20:34:53.3889 INFO Updation Process Completed : EditinContactDetails()
+2020-10-02 20:35:02.8269 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 20:35:02.8463 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 20:35:21.4599 DEBUG Deletion Operation Successful:DeletingContactDetails()
+2020-10-02 20:35:29.3355 INFO Process Completed
+2020-10-02 20:35:29.3506 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:00:50.3173 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 21:01:03.6178 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 21:01:04.2705 INFO No more contact details have been entered
+2020-10-02 21:01:04.2820 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:02:55.2821 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:06:04.6658 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 21:06:11.8062 ERROR Entered Wrong Phone no. : AdditionContactDetails()
+2020-10-02 21:06:29.3964 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 21:06:30.2515 INFO No more contact details have been entered
+2020-10-02 21:06:30.2633 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:06:32.5029 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:13:34.8420 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 21:13:34.9074 INFO No more contact details have been entered
+2020-10-02 21:13:34.9188 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:13:34.9319 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:13:50.8034 DEBUG Debug successful, zip successfully changed : EditingContactDetails()
+2020-10-02 21:13:52.2165 INFO Updation Process Completed : EditinContactDetails()
+2020-10-02 21:13:53.6591 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:13:53.6712 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 21:14:04.4104 DEBUG Deletion Operation Successful:DeletingContactDetails()
+2020-10-02 21:14:05.4932 INFO Process Completed
+2020-10-02 21:14:05.4932 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 23:08:00.8550 ERROR Entered Wrong Phone no. : AdditionContactDetails()
+2020-10-02 23:08:26.6663 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 23:08:42.5297 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 23:44:52.3818 DEBUG Contact Details Addition Successful: AddingContactDetails()
+2020-10-02 23:45:07.0747 ERROR Contact details have already been entered
+2020-10-02 23:45:11.4374 INFO No more contact details have been entered
+2020-10-02 23:45:11.4374 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
+2020-10-02 23:45:11.4374 DEBUG Displaying Contact Details Successful :DisplayingContactDetails()
