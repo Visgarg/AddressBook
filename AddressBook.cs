@@ -6,23 +6,110 @@ namespace AddressBook
 {
     public class AddressBook
     {
-        Dictionary<string, List<ContactDetails>> addressBookDictionary;
-        public AddressBook()
+        public Dictionary<string, ContactPersonInformation> addressBookMapper = new Dictionary<string, ContactPersonInformation>();
+        public void AddAdressBook()
         {
-            addressBookDictionary = new Dictionary<string, List<ContactDetails>>();
-        }
-        public void AddingAddressBook(List<ContactDetails> contactDetailsList)
-        {
-            Console.WriteLine("Please enter the  name of address book");
-            string nameOfAddressBook = Console.ReadLine();
-            addressBookDictionary.Add(nameOfAddressBook, contactDetailsList);
-            
-        }
-        public void DisplayAddressBook()
-        {
-            foreach(KeyValuePair<string,List<ContactDetails>> addressBookDictionaryValues in addressBookDictionary)
+            Console.WriteLine("\nEnter Name for the New Address Book");
+            string name = Console.ReadLine();
+            if (addressBookMapper.ContainsKey(name))
             {
-                Console.WriteLine(addressBookDictionaryValues.Key);
+                Console.WriteLine("Address Book Already exist with this name");
+            }
+            else
+            {
+                ContactPersonInformation contactPersonInformation = new ContactPersonInformation();
+                addressBookMapper.Add(name, contactPersonInformation);
+            }
+        }
+
+        public void AddContactsInAddressBook()
+        {
+            Console.WriteLine("\nEnter Name of address book to add new contact");
+            string name = Console.ReadLine();
+            if (!addressBookMapper.ContainsKey(name))
+            {
+                Console.WriteLine("No address book found with this name");
+                Console.WriteLine("Please Enter Valid Name from following names:");
+                foreach (KeyValuePair<string, ContactPersonInformation> tempPair in addressBookMapper)
+                {
+                    Console.WriteLine(tempPair.Key);
+                }
+            }
+            else
+            {
+                ContactPersonInformation contactPersonInformation = addressBookMapper[name];
+                contactPersonInformation.AddingContactDetails();
+                contactPersonInformation.DisplayContactDetails();
+            }
+        }
+
+        public void EditDetailsOfAddressBook()
+        {
+            Console.WriteLine("\nEnter Name of address book to modify contact details");
+            string name = Console.ReadLine();
+            if (!addressBookMapper.ContainsKey(name))
+            {
+                Console.WriteLine("No address book found with this name");
+                Console.WriteLine("Please Enter Valid Name from following names:");
+                foreach (KeyValuePair<string, ContactPersonInformation> tempPair in addressBookMapper)
+                {
+                    Console.WriteLine(tempPair.Key);
+                }
+            }
+            else
+            {
+                ContactPersonInformation contactPersonInformation = addressBookMapper[name];
+                contactPersonInformation.EditingContactDetails();
+                contactPersonInformation.DisplayContactDetails();
+            }
+        }
+
+        public void DeleteContactsOfAddressBook()
+        {
+            Console.WriteLine("\nEnter Name of address book to delete contact details");
+            string name = Console.ReadLine();
+            if (!addressBookMapper.ContainsKey(name))
+            {
+                Console.WriteLine("No address book found with this name");
+                Console.WriteLine("Please Enter Valid Name from following names:");
+                foreach (KeyValuePair<string, ContactPersonInformation> tempPair in addressBookMapper)
+                {
+                    Console.WriteLine(tempPair.Key);
+                }
+            }
+            else
+            {
+                ContactPersonInformation contactPersonInformation = addressBookMapper[name];
+                contactPersonInformation.DeletingContactDetails();
+                contactPersonInformation.DisplayContactDetails();
+            }
+        }
+        public void DisplayingAddressBooks()
+        {
+            Console.WriteLine("***********************************************************");
+            foreach(KeyValuePair<string,ContactPersonInformation> dictionaryPair in addressBookMapper)
+            {
+                Console.WriteLine("the name of address book is " + dictionaryPair.Key);
+                ContactPersonInformation contactPersonInformation = dictionaryPair.Value;
+                contactPersonInformation.DisplayContactDetails();
+            }
+        }
+        public void DeletingAddressBook()
+        {
+            Console.WriteLine("\nEnter Name of address book to delete ");
+            string name = Console.ReadLine();
+            if (!addressBookMapper.ContainsKey(name))
+            {
+                Console.WriteLine("No address book found with this name");
+                Console.WriteLine("Please Enter Valid Name from following names:");
+                foreach (KeyValuePair<string, ContactPersonInformation> tempPair in addressBookMapper)
+                {
+                    Console.WriteLine(tempPair.Key);
+                }
+            }
+            else
+            {
+                addressBookMapper.Remove(name);
             }
         }
     }

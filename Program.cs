@@ -9,7 +9,43 @@ namespace AddressBook
             Console.WriteLine("Welcome to Address Book Management System");
             //contactPersonInformation.AddingContactDetails("Lakshay", "Garg", "a", "b", "d", 3,5, "lakshay.garg");
             ContactPersonInformation contactPersonInformation = new ContactPersonInformation();
-            contactPersonInformation.AddingContactDetails();
+            AddressBook addressBook = new AddressBook();
+            bool flag = true;
+
+            while (flag)
+            {
+                Console.WriteLine("\nEnter 1 to add New Address Book \nEnter 2 to Add Contacts \nEnter 3 to Edit Contacts \nEnter 4 to Delete Contacts\nEnter 5 to display all the addressbooks and contact details\nEnter 6 to delete address book\nEnter any other key to exit");
+                string options = Console.ReadLine();
+                switch (options)
+                {
+                    case "1":
+                        addressBook.AddAdressBook();
+                        //addressBook.DisplayingAddressBooks(); 
+                        break;
+                    case "2":
+                        addressBook.AddContactsInAddressBook();
+                        addressBook.DisplayingAddressBooks();
+                        break;
+                    case "3":
+                        addressBook.EditDetailsOfAddressBook();
+                        addressBook.DisplayingAddressBooks();
+                        break;
+                    case "4":
+                        addressBook.DeleteContactsOfAddressBook();
+                        addressBook.DisplayingAddressBooks();
+                        break;
+                    case "5":
+                        addressBook.DisplayingAddressBooks();
+                        break;
+                    case "6":
+                        addressBook.DeletingAddressBook();
+                        break;
+                    default:
+                        flag = false;
+                        break;
+                }
+            }
+            /*contactPersonInformation.AddingContactDetails();
             contactPersonInformation.DisplayContactDetails();
            // AddressBook addressBook = new AddressBook();
             //addressBook.DisplayAddressBook();
@@ -27,7 +63,7 @@ namespace AddressBook
             {
                 contactPersonInformation.DeletingContactDetails();
                 contactPersonInformation.DisplayContactDetails();
-            }
+            }*/
         }
     }
 }
